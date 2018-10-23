@@ -29,7 +29,30 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function (){
+	$('.scroll-menu').hide();
+	$(window).on("scroll", function () {
+		console.log();
+		var scrollHeight = $(window).height();
+		console.log('scroll height '+scrollHeight);
+		var scrollPosition =  $(window).scrollTop();
+		console.log('positon '+ scrollPosition);
+		if ( scrollPosition >= scrollHeight) {
+			// when scroll to bottom of the page
+			$( ".scroll-menu" ).addClass('sticky-top');
+			$( ".scroll-menu" ).show();
+			$('.square-navigation').hide();
+		}
+		if (scrollPosition <= scrollHeight) {
+			$( ".scroll-menu" ).removeClass('sticky-top');
+			$( ".scroll-menu" ).hide();
+			$('.square-navigation').show();
+		}
+	});
+});
+</script>
 <?php wp_footer(); ?>
 
 </body>

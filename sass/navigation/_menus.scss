@@ -1,9 +1,17 @@
+
 .main-navigation {
 	clear: both;
 	display: block;
 	float: left;
 	width: 100%;
-
+.menu-main-menu-container {
+	display: flex;
+	justify-content: center;
+}
+.square-navigation {
+	top: 50px;
+	position: relative;
+}
 	ul {
 		display: none;
 		list-style: none;
@@ -52,6 +60,9 @@
 	li {
 		float: left;
 		position: relative;
+		background: #eee;
+		padding: 5em;
+		margin: .5em;
 
 		&:hover > a,
 		&.focus > a {
@@ -61,6 +72,11 @@
 	a {
 		display: block;
 		text-decoration: none;
+		background: orangered;
+		padding: .5em 1.25em;
+		color: #fff;
+		font-size: 1.15rem;
+		letter-spacing: .75px;
 	}
 
 	.current_page_item > a,
@@ -74,6 +90,38 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+}
+
+.scroll-menu {
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	.menu-main-menu-container {
+		display: flex;
+		justify-content: flex-end;
+	}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 1rem;
+	background: #333;
+	width: 500px;
+	display: flex;
+	justify-content: space-around;
+	li {
+	float: left;
+	a {
+		color: #eee;
+		margin: 1rem;
+	}
+	}
+
+	li:hover>ul,
+	li.focus>ul {
+		left: auto;
+	}
+}
+
 }
 
 @media screen and (min-width: 37.5em) {
@@ -104,4 +152,9 @@
 		text-align: right;
 		width: 50%;
 	}
+}
+.sticky-top {
+	position: fixed;
+	top: 0;
+	z-index: 999;
 }

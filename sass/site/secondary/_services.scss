@@ -1,0 +1,18 @@
+#servicesHome {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: $color__background-hr;
+
+    .service {
+        align-content: center;
+        width: 300px;
+        padding: 1rem;
+        margin: .5rem auto;
+        text-align: center;
+        @media screen and ( max-width: 650px ) {
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+}
