@@ -1,0 +1,26 @@
+#quote {
+    display: flex;
+    justify-content: center;
+    background-color: $color__background-orange;
+
+    .quote-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        padding: 1.5rem 2rem;
+        height: 100px;
+        max-width: $container_width;
+        width: 100%;
+        p {
+            align-self: end;
+            color: $black;
+            margin-right: .75rem;
+        }
+        .cta {
+            align-self: center;
+            background: $color__background-button;
+            color: $black;
+            transition: all 2ms;
+        }
+    }
+}

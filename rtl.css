@@ -395,7 +395,7 @@ abbr, acronym {
   cursor: help; }
 
 mark, ins {
-  background: #fff9c0;
+  background: #ffdec0;
   text-decoration: none; }
 
 big {
@@ -460,14 +460,27 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
-.circle {
-  position: relative;
-  margin: auto;
-  width: 750px;
-  height: 750px;
-  border-radius: 100%;
-  border: 10px solid #cccccc;
-  z-index: -1; }
+#quote {
+  display: flex;
+  justify-content: center;
+  background-color: #d36b0b; }
+  #quote .quote-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 1.5rem 2rem;
+    height: 100px;
+    max-width: 1200px;
+    width: 100%; }
+    #quote .quote-container p {
+      align-self: end;
+      color: #222;
+      margin-left: .75rem; }
+    #quote .quote-container .cta {
+      align-self: center;
+      background: #e6e6e6;
+      color: #222;
+      transition: all 2ms; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -560,19 +573,26 @@ a {
   a:hover, a:active {
     outline: 0; }
 
+.btn {
+  display: block;
+  text-decoration: none;
+  padding: .5em 1.25em;
+  color: #fff;
+  font-size: 1.15rem; }
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.square-navigation {
+  position: absolute;
+  bottom: 50px; }
+
 .main-navigation {
   clear: both;
-  display: block;
-  float: right;
   width: 100%; }
   .main-navigation .menu-main-menu-container {
     display: flex;
-    justify-content: center; }
-  .main-navigation .square-navigation {
-    top: 50px;
+    justify-content: center;
     position: relative; }
   .main-navigation ul {
     display: none;
@@ -606,7 +626,7 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none;
-    background: orangered;
+    background: #d36b0b;
     padding: .5em 1.25em;
     color: #fff;
     font-size: 1.15rem;
@@ -810,12 +830,28 @@ a {
   margin: 0 0 1.5em; }
 
 .page-section {
-  padding: 1rem 2rem;
-  margin: 1rem 0; }
+  padding: 1rem 2rem; }
 
 .site-header {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: .75rem; }
+
+.background-image {
+  position: relative; }
+  .background-image .content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0;
+    width: 100%; }
+  .background-image img {
+    width: auto;
+    display: block; }
+
+#homeContent {
+  display: flex; }
 
 /*--------------------------------------------------------------
 ## Comments

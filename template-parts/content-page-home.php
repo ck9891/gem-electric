@@ -10,8 +10,17 @@
 ?>
 
 <!-- Begin Home Content -->
-<section class="page-section" id="homeContent">
-    
+<?php 
+    $bg_image = get_the_post_thumbnail();
+?>
+<section class="background-image" id="homeContent">
+    <?php 
+     if ( isset($bg_image ) ) :
+    ?>
+        <?php print $bg_image; ?>
+    <?php
+     endif;
+    ?>
     <div class="content text-centre">
     <?php
         the_content();
@@ -27,13 +36,12 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
-   
 </section>
 <!-- End Home Content -->
-<section class="page-section" id="quote">
-    <div class="full-width quote-container">
-        <p>This is a quote call to action</p>
-        <a href="" class="btn cta">Call Me For a Quote</a>
+<section class="full-width" id="quote">
+    <div class="quote-container">
+        <p>This is a quote or call to action</p>
+        <a href="#" class="btn cta">Call Me For a Quote</a>
     </div>
 </section>
 <!-- Begin Home Services -->
@@ -41,7 +49,6 @@
     $args = array(
         'post_type' => 'service',
           'post_status' => 'publish',
-
     );
 
 // The Query

@@ -22,9 +22,25 @@
 }
 .page-section {
 	padding: 1rem 2rem;
-	margin: 1rem 0;
 }
+
 .site-header {
 	display: flex;
 	justify-content: center;
+	padding: .75rem;
+}
+
+.background-image {
+	position: relative;
+	.content {
+		@include bg-img-text;
+	}
+	img {
+		width: auto;
+		@include bg-img-element;
+	}
+}
+
+#homeContent {
+	display: flex;
 }

@@ -32,12 +32,4 @@ figure {
 
 @import "tables";
 
-.circle {
-	position: relative;
-	margin: auto;
-	width: 750px;
-	height: 750px;
-	border-radius: 100%;
-	border: 10px solid #cccccc;
-	z-index: -1;
-}
+@import "cta-banner";

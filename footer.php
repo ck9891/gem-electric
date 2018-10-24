@@ -42,8 +42,8 @@ $(document).ready(function (){
 		if ( scrollPosition >= scrollHeight) {
 			// when scroll to bottom of the page
 			$( ".scroll-menu" ).addClass('sticky-top');
-			$( ".scroll-menu" ).show();
-			$('.square-navigation').hide();
+			$( ".scroll-menu" ).fadeIn('slow');
+			$('.square-navigation').fadeOut('slow');
 		}
 		if (scrollPosition <= scrollHeight) {
 			$( ".scroll-menu" ).removeClass('sticky-top');

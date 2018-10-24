@@ -26,8 +26,12 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img src="<?php print get_template_directory_uri(); ?>/img/final.jpg" alt="GEM Electrical Services">
+			</a>
+			<!-- <?php
 			the_custom_logo();
+			
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -37,14 +41,10 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
 			endif;
-			$brighter_ideas_description = get_bloginfo( 'description', 'display' );
-			if ( $brighter_ideas_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $brighter_ideas_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
+			?> -->
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="scroll-menu">
+		<nav id="site-navigation1" class="scroll-menu">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'brighter-ideas' ); ?></button>
 			<?php
 			wp_nav_menu( array(

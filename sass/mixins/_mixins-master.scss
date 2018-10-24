@@ -27,3 +27,23 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin btn() {
+	display: block;
+	text-decoration: none;
+	padding: .5em 1.25em;
+	color: #fff;
+	font-size: 1.15rem;
+}
+
+@mixin bg-img-text() {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	width: 100%;
+}
+
+@mixin bg-img-element() {
+	display: block;
+}
