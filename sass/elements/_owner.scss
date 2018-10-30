@@ -1,0 +1,31 @@
+.row {
+     display: flex;
+     justify-content: center;
+    .owner {
+        text-align: center;
+        padding: .75rem 3rem;
+        margin: 1rem;
+        background-color: $color__background-pre;
+
+        img {
+            display: block;
+            max-width: 150px;
+            height: auto;
+            border: 5px solid $color__background-orange;
+            margin: 1rem;
+            border-radius: 100%;
+        }
+
+        h2.owner-title {
+            font-size: 24px;
+            color: $black;
+            padding: .5rem;
+            margin: .5rem;
+            background-color: $color__background-orange;
+        }
+        h3.sub-title {
+            font-size: 20px;
+            color: $color__text-main;
+        }
+    }
+}

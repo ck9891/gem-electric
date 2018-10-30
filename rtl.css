@@ -460,6 +460,10 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+.entry-header {
+  display: flex;
+  justify-content: center; }
+
 #quote {
   display: flex;
   justify-content: center;
@@ -481,6 +485,31 @@ table {
       background: #e6e6e6;
       color: #222;
       transition: all 2ms; }
+
+.row {
+  display: flex;
+  justify-content: center; }
+  .row .owner {
+    text-align: center;
+    padding: .75rem 3rem;
+    margin: 1rem;
+    background-color: #eee; }
+    .row .owner img {
+      display: block;
+      max-width: 150px;
+      height: auto;
+      border: 5px solid #d36b0b;
+      margin: 1rem;
+      border-radius: 100%; }
+    .row .owner h2.owner-title {
+      font-size: 24px;
+      color: #222;
+      padding: .5rem;
+      margin: .5rem;
+      background-color: #d36b0b; }
+    .row .owner h3.sub-title {
+      font-size: 20px;
+      color: #404040; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -622,7 +651,8 @@ a {
     position: relative;
     background: #eee;
     padding: 5em;
-    margin: .5em; }
+    margin: .5em;
+    box-shadow: -1px 1px 15px 1px #333; }
   .main-navigation a {
     display: block;
     text-decoration: none;
@@ -793,7 +823,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: #ccc; }
+  background: #ccc;
+  box-shadow: -1px 0px 5px inset; }
   #servicesHome .service {
     align-content: center;
     width: 300px;
@@ -823,7 +854,10 @@ a {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1.5rem; }
+
+.entry-text {
+  padding: 1em; }
 
 .page-links {
   clear: both;
@@ -835,19 +869,31 @@ a {
 .site-header {
   display: flex;
   justify-content: center;
-  padding: .75rem; }
+  padding: .75rem;
+  border-bottom: 1px solid #33333385;
+  border-bottom: 1px solid #33333385; }
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem; }
 
 .background-image {
   position: relative; }
   .background-image .content {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
+    top: 30%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
     right: 0;
-    width: 100%; }
+    width: 100%;
+    padding: 0 2rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+    letter-spacing: .35px;
+    text-shadow: -1px 1px #555; }
   .background-image img {
-    width: auto;
+    width: 100%;
     display: block; }
 
 #homeContent {
@@ -869,7 +915,8 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: #ccc; }
+  background: #ccc;
+  box-shadow: -1px 0px 5px inset; }
   #servicesHome .service {
     align-content: center;
     width: 300px;

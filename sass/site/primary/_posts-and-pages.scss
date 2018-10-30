@@ -13,9 +13,11 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5rem;
 }
-
+.entry-text {
+	padding: 1em;	
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -28,15 +30,21 @@
 	display: flex;
 	justify-content: center;
 	padding: .75rem;
+	border-bottom: 1px solid #33333385;    border-bottom: 1px solid #33333385;
 }
-
+.site-footer {
+	display: flex;
+	justify-content: center;
+	padding: 2rem 1rem;
+}
 .background-image {
 	position: relative;
+
 	.content {
 		@include bg-img-text;
 	}
 	img {
-		width: auto;
+		width: 100%;
 		@include bg-img-element;
 	}
 }
