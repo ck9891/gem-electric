@@ -16,16 +16,16 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
+	<script defer src="https://use.fontawesome.com/releases/v5.4.2/js/all.js" integrity="sha384-wp96dIgDl5BLlOXb4VMinXPNiB32VYBSoXOoiARzSTXY+tsK8yDTYfvdTyqzdGGN" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'brighter-ideas' ); ?></a>
-	<section id="preHeader">
-		Call: <a href="tel:+123-456-7890">123-456-7890</a>
-	</section>
+	<!-- Begin PreHeader -->
+	<?php get_template_part('loop-templates/preheader'); ?>
+	<!-- End PreHeader -->
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

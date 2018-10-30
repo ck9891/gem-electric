@@ -98,25 +98,34 @@
 
 .scroll-menu {
 	clear: both;
-	display: inline-block;
 	width: 100%;
+	display: flex;
+	justify-content: flex-end;
 	.menu-main-menu-container {
 		display: flex;
+		align-items: center;
 		justify-content: flex-end;
 	}
 ul {
 	list-style: none;
 	margin: 0;
 	padding: 1rem;
-	background: #333;
+	background: transparent;
 	width: 500px;
 	display: flex;
 	justify-content: space-around;
 	li {
 	float: left;
 	a {
-		color: #eee;
+		color: #333;
 		margin: 1rem;
+		text-decoration: none;
+		transition: all 0.3s linear;
+		border-bottom: none;
+	}
+	a:hover {
+		border-bottom: 3px solid #d36b0b;
+		padding: 8px;
 	}
 	}
 
@@ -161,4 +170,6 @@ ul {
 	position: fixed;
 	top: 0;
 	z-index: 999;
+	color: #eee;
+	background: #333;
 }

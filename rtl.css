@@ -503,13 +503,23 @@ table {
       border-radius: 100%; }
     .row .owner h2.owner-title {
       font-size: 24px;
+      color: #222; }
+    .row .owner h3.sub-title {
+      font-size: 20px;
       color: #222;
       padding: .5rem;
       margin: .5rem;
       background-color: #d36b0b; }
-    .row .owner h3.sub-title {
-      font-size: 20px;
-      color: #404040; }
+
+#preHeader {
+  background: #222;
+  height: 40px;
+  padding: .5rem 2rem;
+  width: 100%;
+  text-align: left;
+  color: #eee; }
+  #preHeader a {
+    color: #eee; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -669,24 +679,32 @@ a {
 
 .scroll-menu {
   clear: both;
-  display: inline-block;
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; }
   .scroll-menu .menu-main-menu-container {
     display: flex;
+    align-items: center;
     justify-content: flex-end; }
   .scroll-menu ul {
     list-style: none;
     margin: 0;
     padding: 1rem;
-    background: #333;
+    background: transparent;
     width: 500px;
     display: flex;
     justify-content: space-around; }
     .scroll-menu ul li {
       float: right; }
       .scroll-menu ul li a {
-        color: #eee;
-        margin: 1rem; }
+        color: #333;
+        margin: 1rem;
+        text-decoration: none;
+        transition: all 0.3s linear;
+        border-bottom: none; }
+      .scroll-menu ul li a:hover {
+        border-bottom: 3px solid #d36b0b;
+        padding: 8px; }
     .scroll-menu ul li:hover > ul,
     .scroll-menu ul li.focus > ul {
       right: auto; }
@@ -719,7 +737,9 @@ a {
 .sticky-top {
   position: fixed;
   top: 0;
-  z-index: 999; }
+  z-index: 999;
+  color: #eee;
+  background: #333; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -783,6 +803,10 @@ a {
   margin-right: auto;
   margin-left: auto; }
 
+.container {
+  max-width: 1200px;
+  margin: auto; }
+
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -835,6 +859,36 @@ a {
       #servicesHome .service {
         width: 100%;
         max-width: 500px; } }
+
+#services {
+  background: #d36b0b;
+  box-shadow: -1px 0px 5px inset; }
+  #services .services-header {
+    font-size: 1.25rem;
+    text-align: center;
+    color: white; }
+  #services .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    #services .container .service {
+      align-content: center;
+      width: 300px;
+      padding: 1rem;
+      margin: .5rem auto;
+      text-align: center;
+      color: white; }
+      #services .container .service .svg-inline--fa {
+        width: 2em !important;
+        height: auto !important; }
+      #services .container .service ul {
+        margin: 0; }
+        #services .container .service ul li {
+          text-align: right; }
+      @media screen and (max-width: 650px) {
+        #services .container .service {
+          width: 100%;
+          max-width: 500px; } }
 
 /*--------------------------------------------------------------
 # Content
@@ -927,6 +981,36 @@ a {
       #servicesHome .service {
         width: 100%;
         max-width: 500px; } }
+
+#services {
+  background: #d36b0b;
+  box-shadow: -1px 0px 5px inset; }
+  #services .services-header {
+    font-size: 1.25rem;
+    text-align: center;
+    color: white; }
+  #services .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    #services .container .service {
+      align-content: center;
+      width: 300px;
+      padding: 1rem;
+      margin: .5rem auto;
+      text-align: center;
+      color: white; }
+      #services .container .service .svg-inline--fa {
+        width: 2em !important;
+        height: auto !important; }
+      #services .container .service ul {
+        margin: 0; }
+        #services .container .service ul li {
+          text-align: right; }
+      @media screen and (max-width: 650px) {
+        #services .container .service {
+          width: 100%;
+          max-width: 500px; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll

@@ -14,3 +14,7 @@
 	clear: both;
 	@include center-block;
 }
+.container {
+	max-width: 1200px;
+	margin: auto;
+}

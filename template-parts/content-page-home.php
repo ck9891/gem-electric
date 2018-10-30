@@ -43,10 +43,13 @@
 <!-- End Quote/CTA -->
 <!-- Begin Home Services -->
 <?php
-    $args = array(
-        'post_type' => 'service',
-          'post_status' => 'publish',
-    );
+
+//args
+$args = array(
+    'post_type' => 'service',
+    'post_status' => 'publish',
+    'posts_per_page' => 3,
+);
 
 // The Query
 $query = new WP_Query( $args );

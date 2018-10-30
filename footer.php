@@ -32,7 +32,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(document).ready(function (){
-	$('.scroll-menu').hide();
 	$(window).on("scroll", function () {
 		console.log();
 		var scrollHeight = $(window).height();
@@ -47,8 +46,7 @@ $(document).ready(function (){
 		}
 		if (scrollPosition <= scrollHeight) {
 			$( ".scroll-menu" ).removeClass('sticky-top');
-			$( ".scroll-menu" ).hide();
-			$('.square-navigation').show();
+			$('.square-navigation').fadeIn('slow');
 		}
 	});
 });
