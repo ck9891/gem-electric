@@ -11,10 +11,18 @@
         height: 100px;
         max-width: $container_width;
         width: 100%;
+        @media screen and (max-width: 650px) {
+            flex-direction: column;
+            justify-content: center;
+        }
         p {
             align-self: end;
             color: $black;
             margin-right: .75rem;
+            @media screen and (max-width: 650px) {
+                align-self: center;
+                margin: .35rem;
+            }
         }
         .cta {
             align-self: center;

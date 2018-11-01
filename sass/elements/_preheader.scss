@@ -9,4 +9,7 @@
     a {
         color: $color__background-pre;
     }
+    @media screen and (max-width: 650px) {
+        text-align: center;
+    }
 }

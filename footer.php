@@ -15,41 +15,36 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'brighter-ideas' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'brighter-ideas' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'brighter-ideas' ), 'brighter-ideas', '<a href="http://cameronfarquharson.ca">Cameron Farquharson</a>' );
+				print 'Website by <a href="http://cameronfarquharson.ca">Cameron Farquharson</a>';
 				?>
 		</div><!-- .site-info -->
+		<div class="esa-number">
+			<img src="<?php print get_template_directory_uri(); ?>/img/ECRA_ESA_Logo_Color.jpg" alt="ESA Number: 7012979">
+		</div>
 	</footer><!-- #colophon -->
+	<?php get_template_part('loop-templates/preheader'); ?>
 </div><!-- #page -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
-$(document).ready(function (){
-	$(window).on("scroll", function () {
-		console.log();
-		var scrollHeight = $(window).height();
-		console.log('scroll height '+scrollHeight);
-		var scrollPosition =  $(window).scrollTop();
-		console.log('positon '+ scrollPosition);
-		if ( scrollPosition >= scrollHeight) {
-			// when scroll to bottom of the page
-			$( ".scroll-menu" ).addClass('sticky-top');
-			$( ".scroll-menu" ).fadeIn('slow');
-			$('.square-navigation').fadeOut('slow');
-		}
-		if (scrollPosition <= scrollHeight) {
-			$( ".scroll-menu" ).removeClass('sticky-top');
-			$('.square-navigation').fadeIn('slow');
-		}
-	});
-});
+// $(document).ready(function (){
+// 	$(window).on("scroll", function () {
+// 		console.log();
+// 		var scrollHeight = $(window).height();
+// 		console.log('scroll height '+scrollHeight);
+// 		var scrollPosition =  $(window).scrollTop();
+// 		console.log('positon '+ scrollPosition);
+// 		if ( scrollPosition >= scrollHeight) {
+// 			// when scroll to bottom of the page
+// 			$('.square-navigation').fadeOut('slow');
+// 		}
+// 		if (scrollPosition <= scrollHeight) {
+// 			$( ".scroll-menu" ).removeClass('sticky-top');
+// 			$('.square-navigation').fadeIn('slow');
+// 		}
+// 	});
+// });
 </script>
 <?php wp_footer(); ?>
 

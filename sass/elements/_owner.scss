@@ -1,11 +1,19 @@
 .row {
      display: flex;
      justify-content: center;
+     
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+    }
+
     .owner {
         text-align: center;
         padding: .75rem 3rem;
         margin: 1rem;
         background-color: $color__background-pre;
+        @media screen and (max-width: 450px) {
+            margin: .25rem;
+        }
 
         img {
             display: block;
@@ -27,6 +35,11 @@
             padding: .5rem;
             margin: .5rem;
             background-color: $color__background-orange;
+        }
+    }
+    .entry-text {
+        @media screen and (max-width: 450px) {
+            padding: .25rem;
         }
     }
 }

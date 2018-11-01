@@ -35,13 +35,27 @@
 .site-footer {
 	display: flex;
 	justify-content: center;
-	padding: 2rem 1rem;
+	align-items: center;
+	padding: 1rem 1rem;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
+	.esa-number {
+		img {
+			width: 150px;
+			height: auto;
+			margin-left: 10px;
+		}
+	}
 }
 .background-image {
 	position: relative;
 
 	.content {
 		@include bg-img-text;
+		@media screen and (max-width: 650px) {
+			font-size: 1rem;
+		}
 	}
 	img {
 		width: 100%;

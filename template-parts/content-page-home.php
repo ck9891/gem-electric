@@ -28,7 +28,6 @@
     </div>
      <!-- Begin Nav Squares -->
     <nav id="site-navigation" class="main-navigation square-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'brighter-ideas' ); ?></button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
