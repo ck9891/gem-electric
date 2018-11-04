@@ -1,2 +1,5 @@
 node_modules/
 node_modules/*
+.gitignore
+wp-content/themes/.DS_Store
+wp-content/uploads/

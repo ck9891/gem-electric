@@ -497,7 +497,7 @@ table {
 .row {
   display: flex;
   justify-content: center; }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .row {
       flex-direction: column; } }
   .row .owner {
@@ -505,7 +505,7 @@ table {
     padding: .75rem 3rem;
     margin: 1rem;
     background-color: #eee; }
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 600px) {
       .row .owner {
         margin: .25rem; } }
     .row .owner img {
@@ -515,6 +515,9 @@ table {
       border: 5px solid #d36b0b;
       margin: 1rem;
       border-radius: 100%; }
+      @media screen and (max-width: 600px) {
+        .row .owner img {
+          margin: 1rem auto; } }
     .row .owner h2.owner-title {
       font-size: 24px;
       color: #222; }
